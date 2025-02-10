@@ -1,97 +1,141 @@
-<!-- <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html>
+
 <head>
-  <style>
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-    .modal-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      padding: 20px;
-      border-radius: 5px;
-    }
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
 
-    .close {
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      cursor: pointer;
-    }
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
 
-    .button {
-      display: inline-block;
-      cursor: pointer;
-      padding: 8px 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
+        .button {
+            display: inline-block;
+            cursor: pointer;
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
-    .button:hover {
-      background-color: #f0f0f0;
-    }
-  </style>
+        .button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .grab-single {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
-  <span class="button" onclick="openModal()">Click me</span>
-
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2>Verify that you are human</h2>
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAAA7SN9BgICU6k8R5"></div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Verify that you are human</h2>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAA7SN9BgICU6k8R5"></div>
+        </div>
     </div>
-  </div>
 
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-  <script>
-    function openModal() {
-      document.getElementById("myModal").style.display = "block";
-    }
+    <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1606px;">
+        <colgroup>
+            <col name="el-table_1_column_1" width="48">
+            <col name="el-table_1_column_2" width="195">
+            <col name="el-table_1_column_3" width="78">
+            <col name="el-table_1_column_4" width="188">
+            <col name="el-table_1_column_5" width="157">
+            <col name="el-table_1_column_6" width="188">
+            <col name="el-table_1_column_7" width="188">
+            <col name="el-table_1_column_8" width="188">
+            <col name="el-table_1_column_9" width="188">
+            <col name="el-table_1_column_10" width="188">
+        </colgroup>
+        <tbody>
+            <tr class="el-table__row">
+                <td rowspan="1" colspan="1" class="el-table_1_column_1  undefined el-table__expand-column">
+                    <div class="cell">
+                        <div class="el-table__expand-icon"><i class="el-icon el-icon-arrow-right"></i></div>
+                    </div>
+                </td>
+                <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
+                    <div class="cell"><span>EA1-LAK</span>
+                    </div>
+                </td>
+                <td rowspan="1" colspan="1" class="el-table_1_column_3  ">
+                    <div class="cell">C</div>
+                </td>
+                <td rowspan="1" colspan="1" class="el-table_1_column_4  ">
+                    <div class="cell">4W</div>
+                </td>
+                <td rowspan="1" colspan="1" class="el-table_1_column_5  ">
+                    <div class="cell">226</div>
+                </td>
+                <td rowspan="1" colspan="1" class="el-table_1_column_6  ">
+                    <div class="cell"><span data-v-74d6a085="">10-02-2025 12:30</span></div>
+                </td>
+                <td rowspan="1" colspan="1" class="el-table_1_column_7  ">
+                    <div class="cell">0h 26m</div>
+                </td>
+                <td rowspan="1" colspan="1" class="el-table_1_column_8  ">
+                    <div class="cell"><span data-v-74d6a085="">10-02-2025 13:30</span></div>
+                </td>
+                <td rowspan="1" colspan="1" class="el-table_1_column_9  ">
+                    <div class="cell"><span data-v-74d6a085=""> 2395 <!----></span></div>
+                </td>
+                <td rowspan="1" colspan="1" class="el-table_1_column_10  ">
+                    <div class="cell"><span data-v-74d6a085="" class="grab-single" onclick="openModal()">grab an order</span><!----></div>
+                </td>
+            </tr>
+            <!-- เพิ่มแถวอื่นๆ ที่เหลือที่นี่ -->
+        </tbody>
+    </table>
 
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
 
-    // Close modal when clicking outside
-    window.onclick = function(event) {
-      const modal = document.getElementById("myModal");
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
 
-    // Turnstile callback
-    window.onloadTurnstileCallback = function() {
-      console.log("Turnstile token:", token);
-      // Handle the token as needed
-    }
-  </script>
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById("myModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Turnstile callback
+        window.onloadTurnstileCallback = function (token) {
+            console.log("Turnstile token:", token);
+            // Handle the token as needed
+        }
+    </script>
 </body>
+
 </html>
