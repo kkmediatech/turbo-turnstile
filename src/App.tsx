@@ -1,35 +1,45 @@
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "./components/ui/dialog";
+import { useState } from 'react';
 
-function App() {
-  const [open, setOpen] = React.useState(false);
+const App = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button variant="default">Click me</Button>
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle>Verify that you are human</DialogTitle>
-        </DialogHeader>
-        <div className="w-full flex justify-center p-4">
-          {/* Cloudflare Turnstile widget */}
-          <div
-            className="cf-turnstile"
-            data-sitekey="0x4AAAAAAA7SN9BgICU6k8R5"
-            data-callback="handleCallback"
-          />
-        </div>
-      </DialogContent>
-    </Dialog>
-  )
-}
+    <div>
+      <span 
+        onClick={() => setIsOpen(true)}
+        className="inline-block px-4 py-2 bg-blue-500 text-white rounded cursor-pointer hover:bg-blue-600"
+      >
+        Click me
+      </span>
 
-export default App
+      {isOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg shadow-xl relative">
+            <button
+              onClick={handleClose}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+            >
+              ✕
+            </button>
+            
+            <h2 className="text-xl font-semibold mb-4">Verify that you are human</h2>
+            
+            <div className="flex justify-center">
+              <div
+                className="cf-turnstile"
+                data-sitekey="0x4AAAAAAA7SN9BgICU6k8R5"
+                data-callback="handleCallback"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default App;
